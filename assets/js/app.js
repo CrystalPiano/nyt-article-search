@@ -10,6 +10,14 @@
         method: "GET"
       }).done(function(response) {
       	console.log(response)
+
+      // Log the queryURL
+        console.log(queryURL);
+
+        // Transfer content to HTML
+        $("#result").html(response.response.meta.hits);
+        // Log the data in the console as well
+        //console.log("Wind Speed: " + response.wind.speed);
       });
 
 
